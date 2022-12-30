@@ -6,3 +6,8 @@ clone_packer()
 }
 
 command -v git >/dev/null 2>&1 && clone_packer || echo "Error cloning Packer"
+
+
+# install treesiter-cli
+
+command -v yarn >/dev/null 2>&1 && yarn global add tree-sitter-cli || echo "yarn is required to install tree-sitter"
