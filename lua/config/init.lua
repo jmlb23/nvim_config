@@ -1,0 +1,6 @@
+require("config.remap")
+require("config.set")
+require("config.packer")
+require("config.colors")
+require("config.treesitter")
+require("config.lsp")
