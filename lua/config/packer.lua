@@ -2,6 +2,7 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
   -- Packer can manage itself
+  use "lukas-reineke/indent-blankline.nvim"
   use 'wbthomason/packer.nvim'
   use {
       'nvim-telescope/telescope.nvim', tag = '0.1.0',
@@ -37,5 +38,8 @@ return require('packer').startup(function(use)
       {'L3MON4D3/LuaSnip'},
       {'rafamadriz/friendly-snippets'},
     }
+  }
+  use {
+    'lewis6991/gitsigns.nvim',
   }
 end)
