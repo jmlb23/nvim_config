@@ -174,6 +174,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jesus/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  xbase = {
+    loaded = true,
+    path = "/Users/jesus/.local/share/nvim/site/pack/packer/start/xbase",
+    url = "https://github.com/xbase-lab/xbase"
   }
 }
 

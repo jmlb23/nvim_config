@@ -42,4 +42,16 @@ return require('packer').startup(function(use)
   use {
     'lewis6991/gitsigns.nvim',
   }
+  if vim.loop.os_uname().sysname == "Darwin" then
+	  use {
+	    'xbase-lab/xbase',
+	    run = 'make install', -- make free_space (not recommended, longer build time)
+	    requires = {
+	      "nvim-lua/plenary.nvim",
+	      "nvim-telescope/telescope.nvim",
+	      "neovim/nvim-lspconfig"
+	    }
+	  }
+  end
+
 end)

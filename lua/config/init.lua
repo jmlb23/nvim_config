@@ -7,3 +7,6 @@ require("config.lsp")
 require("config.netrw")
 require("config.telescope")
 require("config.gitsigns")
+if vim.loop.os_uname().sysname == "Darwin" then
+  require("config.xbase")
+end 
