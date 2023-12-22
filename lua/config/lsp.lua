@@ -31,3 +31,5 @@ lsp.setup()
     command = "lua OpenDiagnosticIfNoFloat()",
     group = "lsp_diagnostics_hold",
   })
+
+vim.api.nvim_set_keymap('n', 'tt', '<cmd>lua vim.lsp.buf.hover()<CR>', {})
