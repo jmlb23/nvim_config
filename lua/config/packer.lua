@@ -31,7 +31,7 @@ return require('packer').startup(function(use)
 	use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
 	use('theprimeagen/harpoon')
 	use('williamboman/mason.nvim')
-        use('williamboman/mason-lspconfig.nvim')
+        use{'williamboman/mason-lspconfig.nvim', tag = 'v1.27.0'}
 	use('neovim/nvim-lspconfig')
 	use('hrsh7th/cmp-nvim-lsp')
 	use('hrsh7th/nvim-cmp')
