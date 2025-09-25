@@ -5,5 +5,5 @@ function create(args)
 	my_file:touch({ parents = true })
 end
 
-vim.api.nvim_create_user_command('Create', create, { desc = 'Create files on the given path', nargs = '*' })
+vim.api.nvim_create_user_command('Create', create, { desc = 'Create files on the given path', nargs = '*', complete = 'file' })
 
