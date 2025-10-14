@@ -39,7 +39,7 @@ return require('packer').startup(function(use)
 		'lewis6991/gitsigns.nvim',
 	}
 
-	use "jose-elias-alvarez/null-ls.nvim"
+	use "nvimtools/none-ls.nvim"
 
 	use {
 		"folke/trouble.nvim",
