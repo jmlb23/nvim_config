@@ -16,5 +16,5 @@ for _, mode in pairs({ 'n', 'i', 'v', 'c' }) do
   disable_key(mode, '<Right>')
 end
 
-vim.keymap.set('n', '<A-t>', ":Neotree filesystem reveal left<CR>")
+vim.keymap.set('n', '<A-t>', ":Neotree filesystem reveal left toggle=true<CR>")
 
