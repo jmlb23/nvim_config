@@ -3,14 +3,22 @@ vim.api.nvim_create_autocmd("FileType", {
     pattern = "*",
     callback = function(args)
         local lang = args.match
-        local unrecognised = {
+        local ignore = {
             ['neo-tree'] = true,
+            ['mason_backdrop'] = true,
             help = true,
-            gitcommit = true
+            gitcommit = true,
+            mason = true
         }
+
         if
-            not pcall(vim.treesitter.language.inspect, lang) and
-            not unrecognised[lang]
+            ignore[lang]
+        then
+            return
+        end
+
+        if
+            not pcall(vim.treesitter.language.inspect, lang)
         then
             require("nvim-treesitter").install({ lang })
         end
