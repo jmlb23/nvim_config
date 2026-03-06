@@ -20,7 +20,7 @@ vim.api.nvim_create_autocmd("FileType", {
         if
             not pcall(vim.treesitter.language.inspect, lang)
         then
-            require("nvim-treesitter").install({ lang })
+            require("nvim-treesitter").install({ lang, async = true })
         end
     end,
 })
