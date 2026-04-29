@@ -1,5 +1,7 @@
 #!/bin/sh
 
+command -v metals 2>&1 >/dev/null || echo "metals would be required for scala support"
+
 command -v rg 2>&1 >/dev/null || echo "ripgrep is recomended to be installed"
 
 command -v yarn 2>&1 >/dev/null || echo "yarn is required to install tree-sitter"
