@@ -19,6 +19,7 @@ vim.opt.rtp:prepend(lazypath)
 require("config.options")
 require("config.keymaps")
 require("config.autocmds")
+require("config.lsp")
 
 -- 3. Setup Lazy.nvim
 require("lazy").setup({
@@ -31,5 +32,5 @@ require("lazy").setup({
     lazy = false, 
     version = false, -- always use the latest git commit
   },
-  checker = { enabled = true }, -- automatically check for plugin updates
+  checker = { enabled = false }, -- automatically check for plugin updates
 })

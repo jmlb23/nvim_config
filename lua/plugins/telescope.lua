@@ -3,7 +3,7 @@ return {
 	tag = "v0.2.0",
 	dependencies = { "nvim-lua/plenary.nvim" },
 	config = function()
-		require("telescope").setup({ defaults = { file_ignore_patterns = { "dist", "node_modules" } } })
+		require("telescope").setup({ defaults = { file_ignore_patterns = { "dist", "node_modules", "venv", "__pycache__" } } })
 		local builtin = require("telescope.builtin")
 		vim.keymap.set("n", "<Space>f", builtin.find_files, {})
 		vim.keymap.set("n", "<Space>g", builtin.live_grep, {})
