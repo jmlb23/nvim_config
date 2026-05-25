@@ -5,6 +5,7 @@ vim.api.nvim_create_autocmd("FileType", {
         local lang = args.match
         local ignore = {
             ['neo-tree'] = true,
+            ['flix'] = true,
             ['mason_backdrop'] = true,
             help = true,
             gitcommit = true,

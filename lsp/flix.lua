@@ -1,0 +1,8 @@
+return {
+  cmd = { 'flix', 'lsp' },
+  filetypes = { 'flix' },
+  root_markers = {
+    '.git',
+    'flix.toml',
+  },
+}
