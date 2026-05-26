@@ -7,6 +7,7 @@ vim.api.nvim_create_autocmd("FileType", {
             ['neo-tree'] = true,
             ['flix'] = true,
             ['mason_backdrop'] = true,
+            ['blink-cmp-menu'] = true,
             help = true,
             gitcommit = true,
             mason = true
