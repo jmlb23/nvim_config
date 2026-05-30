@@ -9,3 +9,9 @@ vim.filetype.add({
     gleam = "gleam",
   },
 })
+
+vim.filetype.add({
+  extension = {
+    mojo = "mojo",
+  },
+})
