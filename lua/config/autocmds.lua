@@ -6,6 +6,7 @@ vim.api.nvim_create_autocmd("FileType", {
         local ignore = {
             ['neo-tree'] = true,
             ['flix'] = true,
+            ['mojo'] = true,
             ['mason_backdrop'] = true,
             ['blink-cmp-menu'] = true,
             help = true,
