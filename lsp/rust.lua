@@ -1,12 +1,32 @@
 return {
-  cmd = { 'rust-analyzer' },
-  filetypes = { 'rs' },
+  cmd = { "rust-analyzer" },
+  filetypes = { "rust" },
   root_markers = {
-    'Cargo.toml',
+    "rust-project.json",
+    "MODULE.bazel",
+    "WORKSPACE.bazel",
+    "WORKSPACE",
   },
-  get_language_id = function(_, ftype)
-    return ftype
-  end,
+  settings = {
+    ["rust-analyzer"] = {
+      checkOnSave = false,
+      diagnostics = {
+        enable = true,
+        experimental = {
+          enable = true,
+        },
+      },
+      files = {
+        excludeDirs = {
+          ".git",
+          "bazel-bin",
+          "bazel-out",
+          "bazel-testlogs",
+          "bazel-Log",
+        },
+      },
+    },
+  },
   capabilities = {
     workspace = {
       didChangeWatchedFiles = {
