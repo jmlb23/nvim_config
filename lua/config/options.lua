@@ -4,6 +4,7 @@ vim.opt.nu = true
 vim.opt.relativenumber = true
 
 vim.opt.incsearch = true
+vim.opt.swapfile = false
 
 vim.opt.scrolloff = 8
 vim.o.tabstop = 4 -- A TAB character looks like 4 spaces
