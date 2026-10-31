@@ -12,4 +12,10 @@ vim.o.expandtab = true -- Pressing the TAB key will insert spaces instead of a T
 vim.o.softtabstop = 4 -- Number of spaces inserted instead of a TAB character
 vim.o.shiftwidth = 4 -- Number of spaces inserted when indenting
 
+--make fold don't collapse all by default when a file is open
+vim.opt.foldlevel = 99
+vim.opt.foldlevelstart = 99
+
+vim.o.foldmethod = "syntax"
+vim.o.foldexpr = "v:lua.vim.lsp.foldexpr()"
 
