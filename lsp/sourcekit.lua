@@ -1,28 +1,26 @@
 -- lsp/sourcekit.lua
 return {
-  cmd = { 'sourcekit-lsp' },
-  filetypes = { 'swift' },
-  root_markers = {
-    '.git',
-    'compile_commands.json',
-    '.sourcekit-lsp',
-    'Package.swift',
-  },
-  get_language_id = function(_, ftype)
-    return ftype
-  end,
-  capabilities = {
-    workspace = {
-      didChangeWatchedFiles = {
-        dynamicRegistration = true,
-      },
+    cmd = { 'sourcekit-lsp' },
+    filetypes = { 'swift' },
+    root_markers = {
+        'compile_commands.json',
+        '.sourcekit-lsp',
+        'Package.swift'
     },
-    textDocument = {
-      diagnostic = {
-        dynamicRegistration = true,
-        relatedDocumentSupport = true,
-      },
-    },
-  },
+    get_language_id = function (_, ftype)
+        return ftype
+    end,
+    capabilities = {
+        workspace = {
+            didChangeWatchedFiles = {
+                dynamicRegistration = true
+            }
+        },
+        textDocument = {
+            diagnostic = {
+                dynamicRegistration = true,
+                relatedDocumentSupport = true
+            }
+        }
+    }
 }
-
